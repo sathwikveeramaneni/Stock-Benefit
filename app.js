@@ -41,19 +41,6 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
-
-// Watchlist.create({
-//     name: "GOOG"
-// }, function(err, watchlist){
-//     if(err){
-//         console.log(err);
-//     } else{
-//         console.log("NEWLY ADDED STOCK: ");
-//         console.log(watchlist);
-//     }
-// });
-
 //=================================================================================================================
 //AUTH ROUTES
 
