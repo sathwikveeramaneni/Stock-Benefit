@@ -85,13 +85,6 @@ app.get("/search", function(req, res) {
 });
 
 app.get("/watchlist",isLoggedIn, function(req,res){
-    // Watchlist.find({}, function(err, watchlist){
-    //     if(err){
-    //         console.log(err);
-    //     }else{
-    //         res.render("watchlist", {watchlist:watchlist});
-    //     }
-    // })
     currentUser = req.user["username"];
     User.findOne({username:currentUser}).populate("stocks").exec(function(err, user){
         if(err){
